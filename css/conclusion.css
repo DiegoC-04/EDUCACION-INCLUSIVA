@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.log{
+    max-width: 1200px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: white;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+}
+
+.heder-content{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+    text-align: justify  
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: purple;
+}
+
+
+
+/*PORTADA*/
+
+
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../imagenes/Conclusion.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(149, 27, 231, 0.781);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+/*CONTENEDOR-CONTENIDO DEL ARTICULO*/
+
+.container-content{
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+article:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(117, 3, 117);
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: justify;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+    text-align: justify;
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*ASAID-ARTICULOS RELACIONADOS*/
+
+.container-aside aside{
+    width: 320px;
+    border-right: 6px;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.container-aside aside img{
+    width: 100%;
+}
+
+.container-aside aside h2,
+.container-aside aside p{
+   margin-top: 20px;
+   padding: 0px 20px;
+   text-align: justify;
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: purple;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-aside aside button:hover{
+    opacity: 0.9;
+
+}
+
+a{
+    display: block;
+    text-align: center;
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background-color: rgb(117, 3, 117);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: transparent;
+    border: 2px solid rgb(117, 3, 117);
+    color: rgb(117, 3, 117);
+}
+
+ 
+
+@media screen and (max-width: 1220px){
+
+    .heder-content,
+    .container-cover,{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+    
+}
+
+@media screen and (max-width: 1220px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .container-aside{
+        flex-wrap: wrap;
+    }
+}
